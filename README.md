@@ -12,6 +12,8 @@ Required to run:
 
 - Node.js: 0.12.0 (Bower: 1.3.12)
 
+- Composer: stable
+
 
 **MAC OSX:**
   
@@ -67,7 +69,7 @@ $ bower install
 ```
 
 
-3: Over an operational installation of LAMP, WAMP or XAMPP, run the code from the DocRoot Apache folder and open the http://localhost/convenia-dev
+3: Over an operational installation of LAMP, WAMP or XAMPP, run the code from the DocRoot Apache folder and open the [http://localhost/convenia-dev](http://localhost/convenia-dev)
 
 
 License & copyright
