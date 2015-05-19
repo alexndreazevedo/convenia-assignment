@@ -19,17 +19,28 @@ Required to run:
   
 ***MacPorts***
 ```
-$ sudo port install npm && npm install -g bower && sudo port install composer
+$ sudo port install npm
+$ npm install -g bower
 ```
   
 ***Homebrew***
 ```
-$ sudo brew install npm && npm install -g bower && sudo brew install composer
+$ sudo brew install npm
+$ npm install -g bower
 ```
 
-**Linux:**
+**Ubuntu:**
 ```
-$ sudo apt-get install nodejs && npm install -g bower && sudo apt-get install composer
+$ sudo apt-get install npm
+$ npm install -g bower
+```
+
+To install Composer on UNIX-based systems, use:
+```
+$ curl -sS https://getcomposer.org/installer | php
+
+# Global install of Composer
+$ sudo mv composer.phar /usr/local/bin/composer
 ```
 
 **Windows:**
