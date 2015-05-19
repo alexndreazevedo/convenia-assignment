@@ -4,52 +4,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Convenia extends CI_Controller {
 
     // Abduzidos definition
-    protected $abduzidos = array(
-        array(
+    protected $abduzidos = [
+        [
             'cometa'    => 'Halley',
             'grupo'     => 'Amarelo',
             'abduzido'  => false,
-        ),
-        array(
+            'feedback'  => null,
+        ], [
             'cometa'    => 'Encke',
             'grupo'     => 'Vermelho',
             'abduzido'  => false,
-        ),
-        array(
+            'feedback'  => null,
+        ], [
             'cometa'    => 'Wolf',
             'grupo'     => 'Preto',
             'abduzido'  => false,
-        ),
-        array(
+            'feedback'  => null,
+        ], [
             'cometa'    => 'Kushida',
             'grupo'     => 'Azul',
             'abduzido'  => false,
-        ),
-    );
+            'feedback'  => null,
+        ],
+    ];
 
     // Ferias difinition
-    protected $ferias = array(
-        array(
+    protected $ferias = [
+        [
             'nome'  => 'José Silva',
             'data'  => '01/01/2014',
-        ),
-        array(
+        ], [
             'nome'  => 'João Souza',
             'data'  => '11/07/2013',
-        ),
-        array(
+        ], [
             'nome'  => 'Pedro Fernandes',
             'data'  => '15/06/2014',
-        ),
-        array(
+        ], [
             'nome'  => 'Paulo Pereira',
-            'data'  => '1/07/2015',
-        ),
-        array(
+            'data'  => '01/07/2015',
+        ], [
             'nome'  => 'Sebastião Oliveira',
             'data'  => '01/02/2015',
-        ),
-    );
+        ],
+    ];
 
     public function index()
 	{
@@ -60,7 +57,12 @@ class Convenia extends CI_Controller {
         // Calculate ferias
         $this->calcularFerias();
 
-        $this->load->view('convenia');
+        $data = [
+            'abduzidos' => $this->abduzidos,
+            'ferias'    => $this->ferias,
+        ];
+
+        $this->load->view('convenia', $data);
 	}
 
     private function calcularAbduzidos() {
@@ -71,8 +73,14 @@ class Convenia extends CI_Controller {
             $cometa = $this->calcularProduto($v['cometa']);
             $grupo  = $this->calcularProduto($v['grupo']);
 
+            $module_cometa  = ($cometa % 45);
+            $module_grupo   = ($grupo % 45);
+
+            // Set the difference to give feedback
+            $this->abduzidos[$k]['feedback'] = abs(($cometa % 45) - ($grupo % 45));
+
             // Check if the module of division is equal
-            if(($cometa % 45) == ($grupo % 45)) {
+            if($module_cometa == $module_grupo) {
 
                 // If module is equal, set true to array of class
                 $this->abduzidos[$k]['abduzido'] = true;

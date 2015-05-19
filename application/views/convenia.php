@@ -73,11 +73,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="img/profile.png" alt="">
+                <img class="img-responsive" src="assets/images/alexandre.jpg" alt="">
                 <div class="intro-text">
-                    <span class="name">Convenia</span>
+                    <span class="name">Alexandre Azevedo</span>
                     <hr class="star-light">
-                    <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    <span class="skills">Validação de habilidades de desenvolvimento para web com cases para Convenia.</span>
+                </div>
+            </div>
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">PHP</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">CodeIgniter</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Apache httpd</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">HTML</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">CSS</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Javascript</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">jQuery</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Git</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">OOP</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Clean Code</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Linux</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="javascript:;" class="btn btn-lg btn-block">Bower</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,9 +139,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-lg-5">
                 <p class="text-justify">Os dois nomes, do grupo e do cometa, são convertidos em um número que representa o produto das letras do nome, onde “A” é 1 e “Z” é 26. Assim, o grupo “LARANJA” seria 12 * 1* 18 * 1 * 14 * 10 * 1 = 30240. Se o resto da divisão do número do grupo por 45 for igual ao resto da divisão do número do cometa por 45, então o grupo será levado.</p>
             </div>
+            <div class="col-lg-10 col-lg-offset-1">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Cometa hospedeiro</th>
+                        <th class="text-center">Pobres desenvolvedores</th>
+                        <th class="text-center">Destino do grupo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($abduzidos as $abduzido):?>
+                        <tr>
+                            <td class="text-center">Cometa <?php echo $abduzido['cometa'] ?></td>
+                            <td class="text-center">Grupo <?php echo $abduzido['grupo'] ?></td>
+                            <?php if($abduzido['abduzido']): ?>
+                                <td class="text-center">Abduzido</td>
+                            <?php else: ?>
+                                <td class="text-center">Escapou por <?php echo $abduzido['feedback'] ?>!</td>
+                            <?php endif; ?>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-group"></i> Abduzir desenvolvedor
+                    <i class="fa fa-group"></i> Abduzir desenvolvedores
                 </a>
             </div>
         </div>
@@ -129,10 +193,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>José Silva</td>
-                            <td class="text-center">01/01/2014</td>
-                        </tr>
+                        <?php foreach($ferias as $funcionario):?>
+                            <tr>
+                                <td><?php echo $funcionario['nome'] ?></td>
+                                <td class="text-center"><?php echo $funcionario['data'] ?></td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -177,15 +243,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="footer-col col-md-4">
                     <h3>About Freelancer</h3>
                     <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    Copyright &copy; Your Website 2014
                 </div>
             </div>
         </div>
