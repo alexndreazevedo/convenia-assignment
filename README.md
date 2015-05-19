@@ -1,6 +1,6 @@
 ## Welcome
 
-This is a project for initial CodeIgniter assignment.
+This is a project for initial CodeIgniter assignment. Is available on [http://alexandreazevedo.me/convenia](http://alexandreazevedo.me/convenia) over production environment
 
 ---
 
