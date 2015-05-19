@@ -17,21 +17,18 @@ Required to run:
 
 **MAC OSX:**
   
-MacPorts
+***MacPorts***
 ```
-
 $ sudo port install npm && npm install -g bower && sudo port install composer
 ```
   
-Homebrew
+***Homebrew***
 ```
-
 $ sudo brew install npm && npm install -g bower && sudo brew install composer
 ```
 
 **Linux:**
 ```
-
 $ sudo apt-get install nodejs && npm install -g bower && sudo apt-get install composer
 ```
 
@@ -40,7 +37,6 @@ $ sudo apt-get install nodejs && npm install -g bower && sudo apt-get install co
 Download the [Node.js](https://nodejs.org/download/) and [Composer](https://getcomposer.org/download/) via website.
 When installing, ensure you have chosen option "Add to PATH". After installed both of them, put on command line:
 ```
-
 $ npm install -g bower
 ```
 
@@ -49,22 +45,20 @@ $ npm install -g bower
 
 1: Clone the repo
 
-  ```
-  $ git clone https://github.com/alexndreazevedo/convenia-dev.git
-  $ cd convenia-dev
-  ```
+```
+$ git clone https://github.com/alexndreazevedo/convenia-dev.git
+$ cd convenia-dev
+```
 
 2: Install the dependencies:
 
 ```
-
 $ composer install
 $ bower install
-  
 ```
 
 
-3: Over an operational installation of LAMP, WAMP or XAMPP, run the code from the DocRoot Apache folder and open the [http://localhost/convenia-dev](http://localhost/convenia-dev)
+3: Over an operational installation of LAMP, WAMP or XAMPP, run the code from the DocRoot Apache folder and open the [http://localhost/convenia-dev](http://localhost/convenia-dev).
 
 
 License & copyright
