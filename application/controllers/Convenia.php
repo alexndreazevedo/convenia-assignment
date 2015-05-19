@@ -33,11 +33,6 @@ class Convenia extends CI_Controller {
     ];
 
 
-    const NAO_CONTRATADO        = 1;
-    const PERIODO_AQUISITIVO    = 2;
-    const PERIODO_CONCESSIVO    = 3;
-    const PERIODO_EXPIRADO      = 4;
-
     // Ferias difinition
     protected $ferias = [
         [
@@ -168,8 +163,8 @@ class Convenia extends CI_Controller {
             $concessivo_fim     = clone $aquisitivo_fim;
             $concessivo_fim->add(new \DateInterval('P12M'));
 
-            $this->ferias[$k]['periodo']['aquisitivo'] = sprintf('De %s a %s.', $aquisitivo_inicio->format('d/m/Y'), $aquisitivo_fim->format('d/m/Y'));
-            $this->ferias[$k]['periodo']['concessivo'] = sprintf('De %s a %s.', $concessivo_inicio->format('d/m/Y'), $concessivo_fim->format('d/m/Y'));
+            $this->ferias[$k]['periodo']['aquisitivo'] = sprintf('%s a %s', $aquisitivo_inicio->format('d/m/Y'), $aquisitivo_fim->format('d/m/Y'));
+            $this->ferias[$k]['periodo']['concessivo'] = sprintf('%s a %s', $concessivo_inicio->format('d/m/Y'), $concessivo_fim->format('d/m/Y'));
 
             if($hoje < $admissao) {
 
@@ -216,7 +211,7 @@ class Convenia extends CI_Controller {
                 $interval_aquisitivo       = $hoje->diff($aquisitivo_fim);
                 $interval_concessivo       = $hoje->diff($concessivo_fim);
 
-                if($interval_aquisitivo->y + 1 > 1) {
+                if($interval_aquisitivo->y > 0) {
                     $this->ferias[$k]['status'] = sprintf('Férias de %d ano(s) vencidas. Direito a gozar férias de %d ano(s).', $interval_concessivo->y + 1, $interval_aquisitivo->y + 1);
                 }
                 else {
