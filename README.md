@@ -19,21 +19,18 @@ Required to run:
   
 MacPorts
 ```
-#!terminal
 
 $ sudo port install npm && npm install -g bower && sudo port install composer
 ```
   
 Homebrew
 ```
-#!terminal
 
 $ sudo brew install npm && npm install -g bower && sudo brew install composer
 ```
 
 **Linux:**
 ```
-#!terminal
 
 $ sudo apt-get install nodejs && npm install -g bower && sudo apt-get install composer
 ```
@@ -43,7 +40,6 @@ $ sudo apt-get install nodejs && npm install -g bower && sudo apt-get install co
 Download the [Node.js](https://nodejs.org/download/) and [Composer](https://getcomposer.org/download/) via website.
 When installing, ensure you have chosen option "Add to PATH". After installed both of them, put on command line:
 ```
-#!terminal
 
 $ npm install -g bower
 ```
@@ -61,7 +57,6 @@ $ npm install -g bower
 2: Install the dependencies:
 
 ```
-#!terminal
 
 $ composer install
 $ bower install
