@@ -20,6 +20,18 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 });
 
+// Tooltip
+$('[data-toggle="tooltip"]').tooltip();
+
+$('.btn-show').click(function() {
+
+    $($(this).attr('href') + ' .result').slideDown(500);
+    $(this).fadeOut(500);
+
+    return false;
+
+});
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();

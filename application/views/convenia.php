@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top">Cases</a>
+            <a class="navbar-brand" href="#page-top">Convenia</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,40 +83,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">PHP</a>
+                        <a href="http://php.net" target="_blank" class="btn btn-lg btn-block">PHP</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">CodeIgniter</a>
+                        <a href="http://git-scm.com" target="_blank" class="btn btn-lg btn-block">Git</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Apache httpd</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">HTML</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">CSS</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Javascript</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">jQuery</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Git</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">OOP</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Clean Code</a>
+                        <a href="http://getcomposer.org" target="_blank" class="btn btn-lg btn-block">Composer</a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Linux</a>
+                        <a href="http://bower.io" target="_blank" class="btn btn-lg btn-block">Bower</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://www.w3.org/html" target="_blank" class="btn btn-lg btn-block">HTML</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://www.w3.org/Style/CSS" target="_blank" class="btn btn-lg btn-block">CSS</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://www.w3.org/standards/techs/js" target="_blank" class="btn btn-lg btn-block">Javascript</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://jquery.com" target="_blank" class="btn btn-lg btn-block">jQuery</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://www.codeigniter.com" target="_blank" class="btn btn-lg btn-block">CodeIgniter</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://httpd.apache.org" target="_blank" class="btn btn-lg btn-block">Apache httpd</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://wikipedia.org/wiki/Object-oriented_programming" target="_blank" class="btn btn-lg btn-block">OOP</a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="javascript:;" class="btn btn-lg btn-block">Bower</a>
+                        <a href="http://wikipedia.org/wiki/Linux" target="_blank" class="btn btn-lg btn-block">Linux</a>
                     </div>
                 </div>
             </div>
@@ -139,34 +139,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-lg-5">
                 <p class="text-justify">Os dois nomes, do grupo e do cometa, são convertidos em um número que representa o produto das letras do nome, onde “A” é 1 e “Z” é 26. Assim, o grupo “LARANJA” seria 12 * 1* 18 * 1 * 14 * 10 * 1 = 30240. Se o resto da divisão do número do grupo por 45 for igual ao resto da divisão do número do cometa por 45, então o grupo será levado.</p>
             </div>
+        </div>
+        <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th class="text-center">Cometa hospedeiro</th>
-                        <th class="text-center">Pobres desenvolvedores</th>
-                        <th class="text-center">Destino do grupo</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($abduzidos as $abduzido):?>
-                        <tr>
-                            <td class="text-center">Cometa <?php echo $abduzido['cometa'] ?></td>
-                            <td class="text-center">Grupo <?php echo $abduzido['grupo'] ?></td>
-                            <?php if($abduzido['abduzido']): ?>
-                                <td class="text-center">Abduzido</td>
-                            <?php else: ?>
-                                <td class="text-center">Escapou por <?php echo $abduzido['feedback'] ?>!</td>
-                            <?php endif; ?>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
+                <div class="result" style="display: none">
+                    <div class="col-lg-12 text-center">
+                        <h3>Resultado</h3>
+                    </div>
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">Cometa hospedeiro</th>
+                                <th class="text-center">Pobres desenvolvedores</th>
+                                <th class="text-center">Destino do grupo</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($abduzidos as $abduzido):?>
+                                <tr>
+                                    <td class="text-center">
+                                        <span data-toggle="tooltip" data-placement="bottom" title="<?php echo $abduzido['info']['cometa'] ?>">
+                                            Cometa <?php echo $abduzido['cometa'] ?>
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span data-toggle="tooltip" data-placement="bottom" title="<?php echo $abduzido['info']['grupo'] ?>">
+                                            Grupo <?php echo $abduzido['grupo'] ?>
+                                        </span>
+                                    </td>
+                                    <?php if($abduzido['abduzido']): ?>
+                                        <td class="text-center">Abduzido</td>
+                                    <?php else: ?>
+                                        <td class="text-center">
+                                            <span data-toggle="tooltip" data-placement="bottom" title="<?php echo $abduzido['info']['razao'] ?>">
+                                                Escapou por <?php echo $abduzido['feedback'] ?>!
+                                            </span>
+                                        </td>
+                                    <?php endif; ?>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-group"></i> Abduzir desenvolvedores
-                </a>
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <a href="#abduzidos" class="btn btn-show btn-lg btn-outline"><i class="fa fa-group"></i> Abduzir desenvolvedores</a>
             </div>
         </div>
     </div>
@@ -202,9 +221,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </tbody>
                 </table>
             </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-calendar-o"></i> Calcular período
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="result" style="display: none">
+                    <div class="col-lg-12 text-center">
+                        <h3>Resultado</h3>
+                    </div>
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th class="text-center">Período Aquisitivo</th>
+                                <th class="text-center">Período Concessivo</th>
+                                <th class="text-center">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($ferias as $funcionario):?>
+                                <tr data-toggle="tooltip" data-placement="bottom" title="<?php echo $funcionario['info'] ?>">
+                                    <td>
+                                        <?php echo $funcionario['nome'] ?>
+                                    </td>
+                                    <td class="text-center">
+                                        <?php echo $funcionario['periodo']['aquisitivo'] ?>
+                                    </td>
+                                    <td class="text-center">
+                                        <?php echo $funcionario['periodo']['concessivo'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $funcionario['status'] ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <a href="#ferias" class="btn btn-show btn-lg btn-outline">
+                    <i class="fa fa-calendar-o"></i> Calcular períodos
                 </a>
             </div>
         </div>
@@ -217,32 +273,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-4">
-                    <h3>Location</h3>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <h3>Site pessoal</h3>
+                    <p><a href="http://alexandreazevedo.me">www.alexandreazevedo.me</a></p>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                        </li>
-                    </ul>
+                    <h3>Perfil no Linkedin</h3>
+                    <p><a href="https://br.linkedin.com/in/alexndreazevedo">alexndreazevedo</a></p>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>About Freelancer</h3>
-                    <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    <h3>Desenvolvido com</h3>
+                    <p><a href="http://www.codeigniter.com/" target="_blank">CodeIgniter</a> e <a href="http://startbootstrap.com/template-overviews/freelancer" target="_blank">Freelancer</a></p>
                 </div>
             </div>
         </div>

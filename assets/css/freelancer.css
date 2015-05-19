@@ -245,7 +245,6 @@ section p {
 }
 
 section table.table {
-    margin-top: 20px;
     font-size: 17px;
 }
 
@@ -253,10 +252,6 @@ section table.table th,
 section table.table td {
     padding: 12px;
     border-color: #2C3E50 !important;
-}
-
-section table.table {
-    margin-top: 0;
 }
 
 section.success table.table th,
@@ -279,6 +274,23 @@ section.success a.active {
     color: #2c3e50;
 }
 
+section .result {
+    margin-top: 40px;
+}
+
+section .result h3 {
+    margin: 0 0 40px;
+}
+
+section .result table.table {
+    font-size: 14px;
+}
+
+section .result table.table th,
+section .result table.table td {
+    padding: 12px 0;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -287,6 +299,15 @@ section.success a.active {
     section.first {
         padding-top: 75px;
     }
+}
+
+.tooltip-inner {
+    max-width: 600px;
+    background-color: #2C3E50;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #2C3E50;
 }
 
 .btn-outline {
