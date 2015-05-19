@@ -294,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div class="footer-col col-md-6">
                     <h3>Open Source</h3>
-                    <p>Desenvolvido com <a href="http://www.codeigniter.com/" target="_blank">CodeIgniter Framework</a>, <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>, <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font-Awesome</a> e <a href="http://startbootstrap.com/template-overviews/freelancer" target="_blank">Freelancer Theme</a>.</p>
+                    <p>Desenvolvido com <a href="http://www.codeigniter.com/" target="_blank">CodeIgniter</a>, <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>, <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font-Awesome</a> e <a href="http://startbootstrap.com/template-overviews/freelancer" target="_blank">Freelancer Theme</a>. Disponível no <a href="http://github.com/alexndreazevedo/convenia-dev" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </div>
