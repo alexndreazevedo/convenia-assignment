@@ -1,0 +1,10 @@
+{
+    "name": "Convenia Dev",
+    "dependencies": {
+        "jquery": "master",
+        "bootstrap": "master",
+        "fontawesome": "master",
+        "classie": "master",
+        "jquery-easing-original": "master"
+	}
+}
