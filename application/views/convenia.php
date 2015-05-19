@@ -272,17 +272,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4">
-                    <h3>Site pessoal</h3>
-                    <p><a href="http://alexandreazevedo.me">www.alexandreazevedo.me</a></p>
+                <div class="footer-col col-md-4 col-md-offset-1">
+                    <h3>Links</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://alexandreazevedo.me" class="btn-social btn-outline"><i class="fa fa-fw fa-wordpress"></i></a>
+                        </li>
+                        <li>
+                            <a href="skype:alexndreazevedo" class="btn-social btn-outline"><i class="fa fa-fw fa-skype"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://br.linkedin.com/in/alexndreazevedo" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/alexndreazevedo/" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://bitbucket.org/alexndreazevedo/" class="btn-social btn-outline"><i class="fa fa-fw fa-bitbucket"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="footer-col col-md-4">
-                    <h3>Perfil no Linkedin</h3>
-                    <p><a href="https://br.linkedin.com/in/alexndreazevedo">alexndreazevedo</a></p>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>Desenvolvido com</h3>
-                    <p><a href="http://www.codeigniter.com/" target="_blank">CodeIgniter</a> e <a href="http://startbootstrap.com/template-overviews/freelancer" target="_blank">Freelancer</a></p>
+                <div class="footer-col col-md-6">
+                    <h3>Open Source</h3>
+                    <p>Desenvolvido com <a href="http://www.codeigniter.com/" target="_blank">CodeIgniter Framework</a>, <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>, <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font-Awesome</a> e <a href="http://startbootstrap.com/template-overviews/freelancer" target="_blank">Freelancer Theme</a>.</p>
                 </div>
             </div>
         </div>
